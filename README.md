@@ -1,13 +1,13 @@
 # NINEFOLD
 
 A single-file, client-side puzzle box. No backend, no network calls, no
-tracking — open `ninefold.html` in a browser and that's the whole app.
+tracking — open `index.html` in a browser and that's the whole app.
 
 ![screenshot](docs/screenshot.png)
 
 ## Play
 
-Open [`ninefold.html`](ninefold.html). Nine compartments stand between
+Open [`index.html`](https://shanemc92.github.io/ninefold-ctf/index.html). Nine compartments stand between
 you and the flag. Each one is a different physical trick — nothing is
 explained up front, and nothing about how a compartment works is visible in
 the page source until you've actually opened it.
@@ -37,8 +37,8 @@ means:
 ## Repo layout
 
 ```
-ninefold.html    the built game — this is the only file you need to play
-builders/          generates ninefold.html from the puzzle definitions
+index.html    the built game — this is the only file you need to play
+builders/          generates index.html from the puzzle definitions
 solvers/           reference solver(s), used to prove each stage is solvable
 docs/              screenshot(s) for this README
 ```
@@ -53,7 +53,7 @@ pip install cryptography
 python3 builders/build.py
 ```
 
-Regenerates `ninefold.html` at the repo root from the definitions in
+Regenerates `index.html` at the repo root from the definitions in
 `builders/`.
 
 ## License
