@@ -1,0 +1,17 @@
+name: checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    uses: shanemc92/.github/.github/workflows/static-checks.yml@main
+    with:
+      # This tool runs each compartment's code through Function(), so a CSP
+      # without 'unsafe-eval' kills the game outright. It ships no meta CSP
+      # rather than one that advertises 'unsafe-eval'.
+      skip-csp-check: true
